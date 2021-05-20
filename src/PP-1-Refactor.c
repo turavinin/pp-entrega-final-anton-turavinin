@@ -48,11 +48,12 @@ int main(void) {
 						"\n| 6. SALDAR RECAUDACION                              |"
 						"\n| 7. IMPRIMIR CONTRIBUYENTES                         |"
 						"\n| 8. IMPRIMIR RECAUDACION                            |"
+						"\n| 9. IMPRIMIR RECAUDACION                            |"
 						"\n| 0. SALIR                                           |"
 						"\n|----------------------------------------------------|"
 						"\n| Seleccione una opción (Ingrese su número): ",
 						"\n|    --- ¡LA OPCION INGRESADA ES INCORRECTA! ---     |\n",
-						0, 8, 3);
+						0, 9, 3);
 
 		if(exitoFuncion == 0)
 		{
