@@ -131,10 +131,7 @@ void printContribuyentesMayorFinanciar(eRecaudacion* recaudaArr, eContribuyente*
 // PUNTO B
 void printRecaudacionesMayor1000(eRecaudacion* recaudaArr, int largoArr)
 {
-	int exitoLocal = -1;
 	int cantidad;
-	int largoPosicionesRecauda;
-	int i;
 
 	eRecaudacion_GetRecaudaMayor1000(recaudaArr, largoArr, &cantidad);
 
@@ -147,9 +144,7 @@ void printContribuyentesFebrero(eRecaudacion* recaudaArr, eContribuyente* contri
 {
 	int exitoLocal = -1;
 	int i;
-	int j = 0;
 	int posicionContribuyente;
-	int idContri[largoArr];
 	exitoLocal = eContribuyente_CheckExistencia(contriArr, largoArr);
 	if(exitoLocal == 0)
 	{
@@ -162,8 +157,6 @@ void printContribuyentesFebrero(eRecaudacion* recaudaArr, eContribuyente* contri
 			{
 				if(recaudaArr[i].mes.id == 2)
 				{
-					idContri[j] = recaudaArr[i].idContribuyente;
-
 					eContribuyente_GetContribuyenteById(contriArr, largoArr, recaudaArr[i].idContribuyente, &posicionContribuyente);
 					printf("\n|%-*s|%-*s|\n", b[0],"NOMBRE", b[1],"CUIL");
 					imprimirContribuyenteCuilNombre(contriArr[posicionContribuyente]);
@@ -187,5 +180,6 @@ void imprimirContribuyenteCuilNombre(eContribuyente contribuyente)
 {
 	char nombreCompleto[MAX_CHAR];
 	utn_FormatoNombreCompleto(contribuyente.nombre, contribuyente.apellido, nombreCompleto);
-	printf("\n|%-*d|%-*s|%-*s|%-*s|%-*s|", b[0], nombreCompleto, b[3], contribuyente.cuil);
+	printf("\n|%-*s|%-*s|", b[0], nombreCompleto, b[3], contribuyente.cuil);
 }
+

@@ -82,6 +82,12 @@ int main(void) {
 				case 8:
 					imprimirRecaudacionesSaldadas(listaRecaudaciones, listaContribuyentes, LARGO_ARR);
 					break;
+				case 9:
+					printContribuyentesFebrero(listaRecaudaciones, listaContribuyentes, LARGO_ARR);
+					printRecaudacionesMayor1000(listaRecaudaciones, LARGO_ARR);
+					break;
+
+
 			}
 		}
 	} while(opcionMenu != 0);
